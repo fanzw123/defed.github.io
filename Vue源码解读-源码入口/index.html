@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ES6,String," />
+  <meta name="keywords" content="Vue,MVVM,MVC," />
 
 
 
@@ -84,25 +84,22 @@
 
 
 
-<meta name="description" content="可以重点关注模板字符串
+<meta name="description" content="version: 1.0.24对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头从入口开始解读Vue源码，让你循序渐进的了解Vue的设计思路及执行过程。Vue源码使用部分ES6语法和功能/src/index.js
 
-支持超过\u0000——\uFFFF的Unicode表示法12alert(&apos;\u&amp;#123;20BB7&amp;#125;&apos;); // ES6 &quot;𠮷&quot;alert(&apos;\u20BB7&apos;); // &quot; 7&quot;
-12345&apos;\z&apos; === &apos;z&apos;  // true&apos;\172&apos; === &apos;z&apos; // true&apos;\x7A&apos; === &apos;z&apos; // true&apos;\u007A&apos; === &apos;z&apos; /">
+源码解读导入Vue类的初始化入口，并在Vue类上扩展静态方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="String">
-<meta property="og:url" content="http://yoursite.com/String/index.html">
+<meta property="og:title" content="Vue源码解读-源码入口">
+<meta property="og:url" content="http://yoursite.com/Vue源码解读-源码入口/index.html">
 <meta property="og:site_name" content="滴滴商业FED">
-<meta property="og:description" content="可以重点关注模板字符串
+<meta property="og:description" content="version: 1.0.24对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头从入口开始解读Vue源码，让你循序渐进的了解Vue的设计思路及执行过程。Vue源码使用部分ES6语法和功能/src/index.js
 
-支持超过\u0000——\uFFFF的Unicode表示法12alert(&apos;\u&amp;#123;20BB7&amp;#125;&apos;); // ES6 &quot;𠮷&quot;alert(&apos;\u20BB7&apos;); // &quot; 7&quot;
-12345&apos;\z&apos; === &apos;z&apos;  // true&apos;\172&apos; === &apos;z&apos; // true&apos;\x7A&apos; === &apos;z&apos; // true&apos;\u007A&apos; === &apos;z&apos; /">
-<meta property="og:updated_time" content="2016-07-01T05:23:57.000Z">
+源码解读导入Vue类的初始化入口，并在Vue类上扩展静态方法">
+<meta property="og:updated_time" content="2016-07-05T10:53:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="String">
-<meta name="twitter:description" content="可以重点关注模板字符串
+<meta name="twitter:title" content="Vue源码解读-源码入口">
+<meta name="twitter:description" content="version: 1.0.24对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头从入口开始解读Vue源码，让你循序渐进的了解Vue的设计思路及执行过程。Vue源码使用部分ES6语法和功能/src/index.js
 
-支持超过\u0000——\uFFFF的Unicode表示法12alert(&apos;\u&amp;#123;20BB7&amp;#125;&apos;); // ES6 &quot;𠮷&quot;alert(&apos;\u20BB7&apos;); // &quot; 7&quot;
-12345&apos;\z&apos; === &apos;z&apos;  // true&apos;\172&apos; === &apos;z&apos; // true&apos;\x7A&apos; === &apos;z&apos; // true&apos;\u007A&apos; === &apos;z&apos; /">
+源码解读导入Vue类的初始化入口，并在Vue类上扩展静态方法">
 
 
 
@@ -123,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/String/"/>
+  <link rel="canonical" href="http://yoursite.com/Vue源码解读-源码入口/"/>
 
-  <title> String | 滴滴商业FED </title>
+  <title> Vue源码解读-源码入口 | 滴滴商业FED </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -288,7 +285,7 @@
             
             
               
-                String
+                Vue源码解读-源码入口
               
             
           </h1>
@@ -300,8 +297,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-28T17:21:11+08:00" content="2016-06-28">
-              2016-06-28
+            <time itemprop="dateCreated" datetime="2016-07-05T17:59:51+08:00" content="2016-07-05">
+              2016-07-05
             </time>
           </span>
 
@@ -314,8 +311,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
                   </a>
                 </span>
 
@@ -330,8 +327,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/String/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="String/" itemprop="commentsCount"></span>
+                <a href="/Vue源码解读-源码入口/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Vue源码解读-源码入口/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -355,39 +352,16 @@
 
       
         <blockquote>
-<p>可以重点关注模板字符串</p>
+<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br>从入口开始解读Vue源码，让你循序渐进的了解Vue的设计思路及执行过程。<br>Vue源码使用部分ES6语法和功能<br><code>/src/index.js</code></p>
 </blockquote>
-<h3 id="支持超过-u0000——-uFFFF的Unicode表示法"><a href="#支持超过-u0000——-uFFFF的Unicode表示法" class="headerlink" title="支持超过\u0000——\uFFFF的Unicode表示法"></a>支持超过\u0000——\uFFFF的Unicode表示法</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert(<span class="string">'\u&#123;20BB7&#125;'</span>); <span class="regexp">//</span> ES6 <span class="string">"𠮷"</span></div><div class="line">alert(<span class="string">'\u20BB7'</span>); <span class="regexp">//</span> <span class="string">" 7"</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'\z'</span> === <span class="string">'z'</span>  <span class="comment">// true</span></div><div class="line"><span class="string">'\172'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div><div class="line"><span class="string">'\x7A'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div><div class="line"><span class="string">'\u007A'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div><div class="line"><span class="string">'\u&#123;7A&#125;'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3><p>导入Vue类的初始化入口，并在Vue类上扩展静态方法  </p>
 <a id="more"></a>
-<h3 id="codePointAt"><a href="#codePointAt" class="headerlink" title="codePointAt()"></a>codePointAt()</h3><h3 id="fromCodePoint"><a href="#fromCodePoint" class="headerlink" title="fromCodePoint()"></a>fromCodePoint()</h3><h3 id="for…of-遍历字符串"><a href="#for…of-遍历字符串" class="headerlink" title="for…of(遍历字符串)"></a>for…of(遍历字符串)</h3><ul>
-<li>字符串拥有Symbol.iterator属性</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'./instance/vue'</span> <span class="comment">// 请阅读 Vue源码解析-类的初始化入口</span></div><div class="line"><span class="keyword">import</span> installGlobalAPI <span class="keyword">from</span> <span class="string">'./global-api'</span> <span class="comment">// 将工具类方法扩展到Vue类上，请阅读Vue源码解析-类方法</span></div><div class="line">installGlobalAPI(Vue)</div><div class="line"><span class="comment">// 指定Vue的当前版本号</span></div><div class="line">Vue.version = <span class="string">'1.0.24'</span></div><div class="line"><span class="comment">// 导出Vue类，类的初始化全部完成</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Vue</div></pre></td></tr></table></figure>
+<h3 id="相关源码解析文章"><a href="#相关源码解析文章" class="headerlink" title="相关源码解析文章"></a>相关源码解析文章</h3><ul>
+<li><a href="./Vue源码解析-类的初始化入口.md">Vue源码解析-类的初始化入口</a></li>
+<li><a href="./Vue源码解析-类方法.md">Vue源码解析-类方法</a></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> codePoint <span class="keyword">of</span> <span class="string">'foo'</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(codePoint)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="at"><a href="#at" class="headerlink" title="at()"></a>at()</h3><ul>
-<li>‘𠮷’这个字不是’吉’</li>
-</ul>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">'abc'</span>.at<span class="comment">(0)</span> <span class="comment">// 'a'</span></div><div class="line"><span class="string">'𠮷'</span>.at<span class="comment">(0)</span> <span class="comment">// '陈'</span></div></pre></td></tr></table></figure>
-<h3 id="normalize"><a href="#normalize" class="headerlink" title="normalize()"></a>normalize()</h3><h3 id="startsWith-str-index"><a href="#startsWith-str-index" class="headerlink" title="startsWith(str [,index])"></a>startsWith(str [,index])</h3><ul>
-<li>s.startsWith(‘xxx’, 6);</li>
-</ul>
-<h3 id="endsWith-str-index"><a href="#endsWith-str-index" class="headerlink" title="endsWith(str [,index])"></a>endsWith(str [,index])</h3><h3 id="includes-str-index"><a href="#includes-str-index" class="headerlink" title="includes(str [,index])"></a>includes(str [,index])</h3><h3 id="repeat"><a href="#repeat" class="headerlink" title="repeat()"></a>repeat()</h3><ul>
-<li>‘hello’.repeat(3) // hellohellohello</li>
-</ul>
-<h3 id="padStart"><a href="#padStart" class="headerlink" title="padStart()"></a>padStart()</h3><ul>
-<li>ES7</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">'x'</span>.padStart(<span class="number">5</span>, <span class="string">'ab'</span>) <span class="comment">// 'ababx'</span></div><div class="line"><span class="string">'x'</span>.padStart(<span class="number">4</span>, <span class="string">'ab'</span>) <span class="comment">// 'abax'</span></div></pre></td></tr></table></figure>
-<h3 id="padEnd"><a href="#padEnd" class="headerlink" title="padEnd()"></a>padEnd()</h3><ul>
-<li>ES7</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">'x'</span>.padEnd(<span class="number">5</span>, <span class="string">'ab'</span>) <span class="comment">// 'xabab'</span></div><div class="line"><span class="string">'x'</span>.padEnd(<span class="number">4</span>, <span class="string">'ab'</span>) <span class="comment">// 'xaba'</span></div></pre></td></tr></table></figure>
-<h3 id="模版字符串"><a href="#模版字符串" class="headerlink" title="模版字符串"></a>模版字符串</h3><ul>
-<li>‘`’ 反引号</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> demo = &#123;</div><div class="line">  a: <span class="string">'aaa'</span>,</div><div class="line">  b: <span class="string">'bbb'</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`</span></div><div class="line">  There are <span class="subst">$&#123;demo.a&#125;</span> items</div><div class="line">   in your basket, <span class="subst">$&#123;demo.b&#125;</span></div><div class="line">  are on sale!</div><div class="line">`);</div></pre></td></tr></table></figure>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">const data = [</div><div class="line">    &#123; <span class="built_in">first</span>: '&lt;Jane&gt;', <span class="built_in">last</span>: 'Bond' &#125;,</div><div class="line">    &#123; <span class="built_in">first</span>: 'Lars', <span class="built_in">last</span>: '&lt;Croft&gt;' &#125;,</div><div class="line">];</div><div class="line">const tmpl = addrs =&gt; `</div><div class="line">  &lt;table&gt;</div><div class="line">  $&#123;addrs.<span class="built_in">map</span>(addr =&gt; `</div><div class="line">    &lt;<span class="built_in">tr</span>&gt;&lt;td&gt;$&#123;addr.<span class="built_in">first</span>&#125;&lt;/td&gt;&lt;/<span class="built_in">tr</span>&gt;</div><div class="line">    &lt;<span class="built_in">tr</span>&gt;&lt;td&gt;$&#123;addr.<span class="built_in">last</span>&#125;&lt;/td&gt;&lt;/<span class="built_in">tr</span>&gt;</div><div class="line">  `).<span class="built_in">join</span>('')&#125;</div><div class="line">  &lt;/table&gt;</div><div class="line">`;</div><div class="line">console.<span class="built_in">log</span>(tmpl(data));</div></pre></td></tr></table></figure>
-<h3 id="raw"><a href="#raw" class="headerlink" title="raw()"></a>raw()</h3>
+
       
     </div>
 
@@ -408,9 +382,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ES6/" rel="tag">#ES6</a>
+            <a href="/tags/Vue/" rel="tag">#Vue</a>
           
-            <a href="/tags/String/" rel="tag">#String</a>
+            <a href="/tags/MVVM/" rel="tag">#MVVM</a>
+          
+            <a href="/tags/MVC/" rel="tag">#MVC</a>
           
         </div>
       
@@ -419,16 +395,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Set/" rel="next" title="Set">
-                <i class="fa fa-chevron-left"></i> Set
+              <a href="/Vue源码解读-实例化入口/" rel="next" title="Vue源码解读-实例化入口">
+                <i class="fa fa-chevron-left"></i> Vue源码解读-实例化入口
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Symbol/" rel="prev" title="Symbol">
-                Symbol <i class="fa fa-chevron-right"></i>
+              <a href="/Vue源码解读-类的初始化入口/" rel="prev" title="Vue源码解读-类的初始化入口">
+                Vue源码解读-类的初始化入口 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -550,7 +526,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#支持超过-u0000——-uFFFF的Unicode表示法"><span class="nav-number">1.</span> <span class="nav-text">支持超过\u0000——\uFFFF的Unicode表示法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#codePointAt"><span class="nav-number">2.</span> <span class="nav-text">codePointAt()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fromCodePoint"><span class="nav-number">3.</span> <span class="nav-text">fromCodePoint()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for…of-遍历字符串"><span class="nav-number">4.</span> <span class="nav-text">for…of(遍历字符串)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#at"><span class="nav-number">5.</span> <span class="nav-text">at()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#normalize"><span class="nav-number">6.</span> <span class="nav-text">normalize()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#startsWith-str-index"><span class="nav-number">7.</span> <span class="nav-text">startsWith(str [,index])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#endsWith-str-index"><span class="nav-number">8.</span> <span class="nav-text">endsWith(str [,index])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#includes-str-index"><span class="nav-number">9.</span> <span class="nav-text">includes(str [,index])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#repeat"><span class="nav-number">10.</span> <span class="nav-text">repeat()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#padStart"><span class="nav-number">11.</span> <span class="nav-text">padStart()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#padEnd"><span class="nav-number">12.</span> <span class="nav-text">padEnd()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模版字符串"><span class="nav-number">13.</span> <span class="nav-text">模版字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#raw"><span class="nav-number">14.</span> <span class="nav-text">raw()</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#源码解读"><span class="nav-number">1.</span> <span class="nav-text">源码解读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关源码解析文章"><span class="nav-number">2.</span> <span class="nav-text">相关源码解析文章</span></a></li></ol></div>
             
           </div>
         </section>
@@ -670,9 +646,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'ddefed';
-      var disqus_identifier = 'String/';
-      var disqus_title = "String";
-      var disqus_url = 'http://yoursite.com/String/';
+      var disqus_identifier = 'Vue源码解读-源码入口/';
+      var disqus_title = "Vue源码解读-源码入口";
+      var disqus_url = 'http://yoursite.com/Vue源码解读-源码入口/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
