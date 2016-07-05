@@ -94,7 +94,7 @@
 <meta property="og:description" content="version: 1.0.24对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头从入口开始解读Vue源码，让你循序渐进的了解Vue的设计思路及执行过程。Vue源码使用部分ES6语法和功能/src/index.js
 
 源码解读导入Vue类的初始化入口，并在Vue类上扩展静态方法">
-<meta property="og:updated_time" content="2016-07-05T10:53:16.000Z">
+<meta property="og:updated_time" content="2016-07-05T10:56:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue源码解读-源码入口">
 <meta name="twitter:description" content="version: 1.0.24对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头从入口开始解读Vue源码，让你循序渐进的了解Vue的设计思路及执行过程。Vue源码使用部分ES6语法和功能/src/index.js
@@ -358,7 +358,7 @@
 <a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'./instance/vue'</span> <span class="comment">// 请阅读 Vue源码解析-类的初始化入口</span></div><div class="line"><span class="keyword">import</span> installGlobalAPI <span class="keyword">from</span> <span class="string">'./global-api'</span> <span class="comment">// 将工具类方法扩展到Vue类上，请阅读Vue源码解析-类方法</span></div><div class="line">installGlobalAPI(Vue)</div><div class="line"><span class="comment">// 指定Vue的当前版本号</span></div><div class="line">Vue.version = <span class="string">'1.0.24'</span></div><div class="line"><span class="comment">// 导出Vue类，类的初始化全部完成</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Vue</div></pre></td></tr></table></figure>
 <h3 id="相关源码解析文章"><a href="#相关源码解析文章" class="headerlink" title="相关源码解析文章"></a>相关源码解析文章</h3><ul>
-<li><a href="./Vue源码解析-类的初始化入口.md">Vue源码解析-类的初始化入口</a></li>
+<li><a href="/Vue%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB-%E7%B1%BB%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%85%A5%E5%8F%A3/">Vue源码解析-类的初始化入口</a></li>
 <li><a href="./Vue源码解析-类方法.md">Vue源码解析-类方法</a></li>
 </ul>
 
@@ -395,16 +395,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Vue源码解读-实例化入口/" rel="next" title="Vue源码解读-实例化入口">
-                <i class="fa fa-chevron-left"></i> Vue源码解读-实例化入口
+              <a href="/Vue源码解读-Watchers-数据订阅者-异步执行队列/" rel="next" title="Vue源码解读-Watchers(数据订阅者)异步执行队列">
+                <i class="fa fa-chevron-left"></i> Vue源码解读-Watchers(数据订阅者)异步执行队列
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Vue源码解读-类的初始化入口/" rel="prev" title="Vue源码解读-类的初始化入口">
-                Vue源码解读-类的初始化入口 <i class="fa fa-chevron-right"></i>
+              <a href="/Vue源码解读-实例化入口/" rel="prev" title="Vue源码解读-实例化入口">
+                Vue源码解读-实例化入口 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
