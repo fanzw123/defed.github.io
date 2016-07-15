@@ -369,7 +369,7 @@
 <ul>
 <li>两种写法</li>
 </ul>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 分别导出，必须在定义的时候</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> a = <span class="string">'a'</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> b = <span class="string">'b'</span></div><div class="line"></div><div class="line"><span class="comment">// 整体导出，必须放在大括号内</span></div><div class="line"><span class="keyword">var</span> a = <span class="string">'a'</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="string">'b'</span>;</div><div class="line"><span class="keyword">export</span> &#123;a, b&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 分别导出，必须在定义的时候</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> a = <span class="string">'a'</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> b = <span class="string">'b'</span></div><div class="line"></div><div class="line"><span class="comment">// 整体导出，必须放在大括号内</span></div><div class="line"><span class="keyword">var</span> a = <span class="string">'a'</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="string">'b'</span>;</div><div class="line"><span class="keyword">export</span> &#123;a, b&#125;;</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <ul>
 <li>可以导出类或者函数</li>
@@ -382,7 +382,7 @@
 <ul>
 <li>必须在模块顶层调用，不能处于模块内的块级作用域中</li>
 </ul>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="keyword">export</span> <span class="keyword">var</span> a = <span class="number">1</span>; <span class="comment">// babel编译直接报错</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="keyword">export</span> <span class="keyword">var</span> a = <span class="number">1</span>; <span class="comment">// babel编译直接报错</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><blockquote>
 <p>加载模块</p>
 </blockquote>
@@ -397,11 +397,11 @@
 <ul>
 <li>import会提升到模块头部执行</li>
 </ul>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">improt &#123;a1&#125; <span class="keyword">from</span> <span class="string">'./xxx'</span>; <span class="comment">// 这句会提前到顶部执行</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">improt &#123;a1&#125; <span class="keyword">from</span> <span class="string">'./xxx'</span>; <span class="comment">// 这句会提前到顶部执行</span></div></pre></td></tr></table></figure>
 <ul>
 <li>可以不导入值，进做加载执行用</li>
 </ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">import</span> './xxx';</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="string">'./xxx'</span>;</div></pre></td></tr></table></figure>
 <h3 id="export-default"><a href="#export-default" class="headerlink" title="export default"></a>export default</h3><ul>
 <li>使用default导出的变量，在使用import导入时，可以任意定义导入的变量名，不需要和导出时一致。</li>
 </ul>

@@ -600,8 +600,8 @@
 
       
         
-          <h3 id="属性的简单表示法"><a href="#属性的简单表示法" class="headerlink" title="属性的简单表示法"></a>属性的简单表示法</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="string">'foo'</span>;</div><div class="line"><span class="keyword">var</span> bar = &#123;foo&#125;; <span class="comment">// bar = &#123;foo: 'foo'&#125;</span></div></pre></td></tr></table></figure>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span><span class="params">(x, y)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;x, y&#125;;</div><div class="line">&#125;</div><div class="line">f(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// &#123;x: 1, y: 2&#125;</span></div></pre></td></tr></table></figure>
+          <h3 id="属性的简单表示法"><a href="#属性的简单表示法" class="headerlink" title="属性的简单表示法"></a>属性的简单表示法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="string">'foo'</span>;</div><div class="line"><span class="keyword">var</span> bar = &#123;foo&#125;; <span class="comment">// bar = &#123;foo: 'foo'&#125;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x, y</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;x, y&#125;;</div><div class="line">&#125;</div><div class="line">f(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// &#123;x: 1, y: 2&#125;</span></div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/Object/#more" rel="contents">
               阅读全文 &raquo;
@@ -858,7 +858,7 @@
 <ul>
 <li>用let命令声明，不会发生变量提升。</li>
 </ul>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.<span class="built_in">log</span>(foo); <span class="comment">// error</span></div><div class="line"><span class="keyword">let</span> foo = <span class="number">1</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(foo); <span class="comment">// error</span></div><div class="line"><span class="keyword">let</span> foo = <span class="number">1</span>;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/let-const/#more" rel="contents">
               阅读全文 &raquo;
