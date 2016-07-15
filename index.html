@@ -350,12 +350,10 @@
           <blockquote>
 <p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br>$get &amp; $set是Vue对外暴露给用户使用的，用于对data的内容进行获取和设置的api。<br>出现在instance/api/data.js中，但调用的方法并不一定都在该文件中。<br>本文主要按方法的执行流程分析源码。  </p>
 </blockquote>
-<h3 id="get"><a href="#get" class="headerlink" title="$get"></a>$get</h3><h4 id="什么场景下会用到它呢？"><a href="#什么场景下会用到它呢？" class="headerlink" title="什么场景下会用到它呢？"></a>什么场景下会用到它呢？</h4><ul>
-<li>还真没想到</li>
+<h3 id="get"><a href="#get" class="headerlink" title="$get"></a>$get</h3><h4 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h4><ul>
+<li>使用demo</li>
 </ul>
-<h4 id="入口"><a href="#入口" class="headerlink" title="入口"></a>入口</h4><ul>
-<li>将字符串表达式处理成一个对象，并调用对象的get方法返回结果。解构如下：</li>
-</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">var</span> demo = new Vue(&#123;</div><div class="line">    data: &#123;</div><div class="line">        <span class="selector-tag">a</span>: <span class="number">1</span>,</div><div class="line">        <span class="selector-tag">b</span>: <span class="number">2</span></div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">demo.<span class="variable">$get</span>(<span class="string">'a + b'</span>)</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/Vue源码解读-get-set的内部实现/#more" rel="contents">
               阅读全文 &raquo;
@@ -785,131 +783,6 @@
             
               
                 
-                <a class="post-title-link" href="/Vue源码解读-实例化入口/" itemprop="url">
-                  Vue源码解读-实例化入口
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-05T17:59:51+08:00" content="2016-07-05">
-              2016-07-05
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/Vue源码解读-实例化入口/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Vue源码解读-实例化入口/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br>文件：<code>/src/instance/internal/init.js</code></p>
-</blockquote>
-<h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3><p>原始Vue类的实例化和Vue的子类的实例化的入口都是这里<br>实例化过程中，主要关注各部分功能的实例化顺序<br>源码分析中提到的Vue实例包括Vue的子类实例<br>未进行解读部分为尚未读到或没读明白，嘎嘎。。。脸红了。。  </p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/Vue源码解读-实例化入口/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/Vue源码解读-源码入口/" itemprop="url">
                   Vue源码解读-源码入口
                 </a>
@@ -985,6 +858,131 @@
 <h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3><p>导入Vue类的初始化入口，并在Vue类上扩展静态方法  </p>
           <div class="post-more-link text-center">
             <a class="btn" href="/Vue源码解读-源码入口/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Vue源码解读-实例化入口/" itemprop="url">
+                  Vue源码解读-实例化入口
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-05T17:59:51+08:00" content="2016-07-05">
+              2016-07-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Vue源码解读-实例化入口/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Vue源码解读-实例化入口/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br>文件：<code>/src/instance/internal/init.js</code></p>
+</blockquote>
+<h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3><p>原始Vue类的实例化和Vue的子类的实例化的入口都是这里<br>实例化过程中，主要关注各部分功能的实例化顺序<br>源码分析中提到的Vue实例包括Vue的子类实例<br>未进行解读部分为尚未读到或没读明白，嘎嘎。。。脸红了。。  </p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Vue源码解读-实例化入口/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
