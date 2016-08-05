@@ -100,7 +100,7 @@ document.all
 获取文档中的所有HTML元素的引用
 是一个类数组对象
 已被document.getElementById()等API所取代，目前不常">
-<meta property="og:updated_time" content="2016-08-05T08:42:18.000Z">
+<meta property="og:updated_time" content="2016-08-05T09:06:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生DOM系列-Document对象">
 <meta name="twitter:description" content="本系列文章中所指的DOM，都是纯纯的HTML DOM，不包括XML DOM等代表整个HTML文档Window对象的属性，可以通过docuemnt或window.document访问document对象可以方便我们通过js操作html  
@@ -482,7 +482,7 @@ document.all
 <li>只读属性</li>
 <li>返回文档的根元素，如HTML文档的html元素</li>
 </ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.documentElement === <span class="built_in">document</span>.children[<span class="number">0</span>]</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.documentElement === <span class="built_in">document</span>.children[<span class="number">0</span>]</div></pre></td></tr></table></figure>
 <h3 id="document-documentURI"><a href="#document-documentURI" class="headerlink" title="document.documentURI"></a>document.documentURI</h3><ul>
 <li>返回文档地址字符串</li>
 <li>只读属性</li>
@@ -507,71 +507,7 @@ document.all
 <li>返回一个由StyleSheet对象组成的StyleSheetList</li>
 <li>类数组对象</li>
 </ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.styleSheets.item(<span class="number">0</span>) === <span class="built_in">document</span>.styleSheets[<span class="number">0</span>]</div></pre></td></tr></table></figure>
-<ul>
-<li>StyleSheet对象中的重要属性和方法</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cssRules</td>
-<td></td>
-</tr>
-<tr>
-<td>disabled</td>
-<td></td>
-</tr>
-<tr>
-<td>href</td>
-<td></td>
-</tr>
-<tr>
-<td>media</td>
-<td></td>
-</tr>
-<tr>
-<td>ownerNode</td>
-<td></td>
-</tr>
-<tr>
-<td>ownerRule</td>
-<td></td>
-</tr>
-<tr>
-<td>parentStyleSheet</td>
-<td></td>
-</tr>
-<tr>
-<td>rules</td>
-<td></td>
-</tr>
-<tr>
-<td>title</td>
-<td></td>
-</tr>
-<tr>
-<td>type</td>
-<td></td>
-</tr>
-<tr>
-<td>addRule()</td>
-<td></td>
-</tr>
-<tr>
-<td>deleteRule()</td>
-<td></td>
-</tr>
-<tr>
-<td>insertRule()</td>
-</tr>
-</tbody>
-</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.styleSheets.item(<span class="number">0</span>) === <span class="built_in">document</span>.styleSheets[<span class="number">0</span>]</div></pre></td></tr></table></figure>
 <h3 id="document-styleSheetSets"><a href="#document-styleSheetSets" class="headerlink" title="document.styleSheetSets"></a>document.styleSheetSets</h3><ul>
 <li>返回目前可用的样式表集合</li>
 </ul>
@@ -596,7 +532,7 @@ document.all
 <h3 id="document-defaultView"><a href="#document-defaultView" class="headerlink" title="document.defaultView"></a>document.defaultView</h3><ul>
 <li>返回当前document对象所关联的window对象</li>
 </ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.defaultView === <span class="built_in">window</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.defaultView === <span class="built_in">window</span></div></pre></td></tr></table></figure>
 <h3 id="document-designMode"><a href="#document-designMode" class="headerlink" title="document.designMode"></a>document.designMode</h3><ul>
 <li>控制整个文档是否可编辑</li>
 <li>默认为’off’</li>
