@@ -7,7 +7,7 @@
       <title><![CDATA[Vue源码解读-方法与事件绑定]]></title>
       <url>http://yoursite.com/Vue%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB-%E6%96%B9%E6%B3%95%E4%B8%8E%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/</url>
       <content type="html"><![CDATA[<blockquote>
-<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br>本文主要分析Vue源码中对方法与事件绑定的实现</p>
+<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br>本文主要分析Vue源码中对方法与事件绑定的实现  </p>
 </blockquote>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Vue中的事件有<code>Dom事件</code>和<code>Vue事件（自定义事件）</code>两种，所以可将事件的绑定总结为一下几种类型：</p>
 <ul>
@@ -17,6 +17,7 @@
 <li>类型四：通过<code>$on</code>方法绑定的自定义事件</li>
 </ul>
 <p>下面就析上述几种类型事件的绑定做具体的分析</p>
+<a id="more"></a>
 <h3 id="类型一：在模板中通过v-on指令绑定的Dom事件"><a href="#类型一：在模板中通过v-on指令绑定的Dom事件" class="headerlink" title="类型一：在模板中通过v-on指令绑定的Dom事件"></a>类型一：在模板中通过<code>v-on</code>指令绑定的Dom事件</h3><p>采用此方式作为事件处理的原因及优点可参考Vue文档中<a href="http://cn.vuejs.org/guide/events.html#u4E3A_u4EC0_u4E48_u5728_HTML__u4E2D_u76D1_u542C_u4E8B_u4EF6_3F" target="_blank" rel="external">为什么在 HTML 中监听事件?</a></p>
 <p>模板中的<code>v-on</code>作为指令的一种，要通过模板编译（compile）和指令注册（directives）来实现, 其中涉及这两部分的内容将在其解读中再做分析。</p>
 <p>先来看编译中的部分 <code>compile/compile.js</code></p>

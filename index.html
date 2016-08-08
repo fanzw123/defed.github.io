@@ -347,15 +347,17 @@
 
       
         
-          
-          
-version: 1.0.24对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头本文主要分析Vue源码中对方法与事件绑定的实现
-
-前言Vue中的事件有Dom事件和Vue事件（自定义事件）两种，所以可将事件的绑定总结为一下几种类型：
-
-类型一：在模板中通过v
-          ...
-
+          <blockquote>
+<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br>本文主要分析Vue源码中对方法与事件绑定的实现  </p>
+</blockquote>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Vue中的事件有<code>Dom事件</code>和<code>Vue事件（自定义事件）</code>两种，所以可将事件的绑定总结为一下几种类型：</p>
+<ul>
+<li>类型一：在模板中通过<code>v-on</code>指令绑定的Dom事件</li>
+<li>类型二：在模板中通过<code>v-on</code>指令绑定的自定义事件</li>
+<li>类型三：在<code>vue options</code>中通过<code>events</code>绑定的自定义事件</li>
+<li>类型四：通过<code>$on</code>方法绑定的自定义事件</li>
+</ul>
+<p>下面就析上述几种类型事件的绑定做具体的分析</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/Vue源码解读-方法与事件绑定/#more" rel="contents">
               阅读全文 &raquo;
