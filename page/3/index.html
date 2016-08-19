@@ -278,6 +278,134 @@
             
               
                 
+                <a class="post-title-link" href="/Map/" itemprop="url">
+                  Map
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-28T17:15:46+08:00" content="2016-06-28">
+              2016-06-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Map/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Map/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>键值对的集合</p>
+</blockquote>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li>“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。</li>
+</ul>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</div><div class="line"><span class="keyword">var</span> o = &#123;p: <span class="string">"Hello World"</span>&#125;;</div><div class="line"></div><div class="line">m.<span class="keyword">set</span>(o, <span class="string">"content"</span>)</div><div class="line">m.<span class="keyword">get</span>(o) <span class="comment">// "content"</span></div><div class="line"></div><div class="line">m.has(o) <span class="comment">// true</span></div><div class="line">m.delete(o) <span class="comment">// true</span></div><div class="line">m.has(o) <span class="comment">// false</span></div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Map/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/let-const/" itemprop="url">
                   Let & Const
                 </a>
@@ -354,7 +482,7 @@
 <ul>
 <li>用let命令声明，不会发生变量提升。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(foo); <span class="comment">// error</span></div><div class="line"><span class="keyword">let</span> foo = <span class="number">1</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.<span class="built_in">log</span>(foo); <span class="comment">// error</span></div><div class="line"><span class="keyword">let</span> foo = <span class="number">1</span>;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/let-const/#more" rel="contents">
               阅读全文 &raquo;
@@ -1369,7 +1497,7 @@
 <ul>
 <li>两种写法</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 分别导出，必须在定义的时候</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> a = <span class="string">'a'</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> b = <span class="string">'b'</span></div><div class="line"></div><div class="line"><span class="comment">// 整体导出，必须放在大括号内</span></div><div class="line"><span class="keyword">var</span> a = <span class="string">'a'</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="string">'b'</span>;</div><div class="line"><span class="keyword">export</span> &#123;a, b&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 分别导出，必须在定义的时候</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> a = <span class="string">'a'</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> b = <span class="string">'b'</span></div><div class="line"></div><div class="line"><span class="comment">// 整体导出，必须放在大括号内</span></div><div class="line"><span class="keyword">var</span> a = <span class="string">'a'</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="string">'b'</span>;</div><div class="line"><span class="keyword">export</span> &#123;a, b&#125;;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/模块/#more" rel="contents">
               阅读全文 &raquo;
@@ -1446,7 +1574,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

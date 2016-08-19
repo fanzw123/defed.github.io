@@ -278,6 +278,135 @@
             
               
                 
+                <a class="post-title-link" href="/原生DOM系列-Window对象/" itemprop="url">
+                  原生DOM系列-Window对象
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-19T16:04:40+08:00" content="2016-08-19">
+              2016-08-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/DOM/" itemprop="url" rel="index">
+                    <span itemprop="name">DOM</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/原生DOM系列-Window对象/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="原生DOM系列-Window对象/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>本系列文章中所指的DOM，都是纯纯的HTML DOM，不包括XML DOM等<br>Window对象包含window、document等属性<br>也就是说window属性和document属性同属于Window对象<br>该文档中过滤掉了部分特别常用的属性或方法，如alert/console等<br>同时也过滤掉了部分特别不常用的属性或方法<br>内容尚不完整，请下周继续收看！！  </p>
+</blockquote>
+<h3 id="window属性"><a href="#window属性" class="headerlink" title="window属性"></a>window属性</h3><ul>
+<li>window属性指向当前Window对象</li>
+<li>全局环境下window属性同其它属性和this的关系</li>
+</ul>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span> === <span class="keyword">this</span> <span class="regexp">//</span> <span class="keyword">this</span>和<span class="built_in">window</span>同指向Window对象</div><div class="line"><span class="built_in">window</span>.<span class="keyword">this</span> <span class="regexp">//</span> <span class="literal">undefined</span>。<span class="keyword">this</span>并非Window对象的属性</div><div class="line"><span class="built_in">window</span> === parent <span class="regexp">//</span> 顶层<span class="built_in">window</span>中，parent属性指向当前Window对象</div><div class="line"><span class="built_in">window</span>.parent === <span class="built_in">window</span> <span class="regexp">//</span> parent是Window对象的属性</div><div class="line"><span class="built_in">window</span> === top <span class="regexp">//</span> 顶层<span class="built_in">window</span>中，top属性都指向当前Window对象</div><div class="line"><span class="built_in">window</span>.top === top <span class="regexp">//</span> top是Window对象的属性</div><div class="line"><span class="built_in">window</span> === self <span class="regexp">//</span> self和<span class="built_in">window</span>一样指向当前Window对象</div><div class="line"><span class="built_in">window</span>.self === self <span class="regexp">//</span> self是Window对象的属性</div><div class="line"><span class="built_in">window</span> === <span class="built_in">document</span>.defaultView</div><div class="line"><span class="built_in">window</span> === frames <span class="regexp">//</span> 是不是很奇怪。其实iframes会被解析挂载到<span class="built_in">window</span>对象上，<span class="built_in">window</span>对象是一个类数组对象</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/原生DOM系列-Window对象/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/原生DOM系列-Element对象/" itemprop="url">
                   原生DOM系列-Element对象
                 </a>
@@ -1422,131 +1551,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/Vue源码解读-类的初始化入口/" itemprop="url">
-                  Vue源码解读-类的初始化入口
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-05T18:03:31+08:00" content="2016-07-05">
-              2016-07-05
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/Vue源码解读-类的初始化入口/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Vue源码解读-类的初始化入口/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br><code>/src/instance/vue.js</code></p>
-</blockquote>
-<h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3><p>类的初始化过程中，主要绑定在类实例化过程中所需要用到的功能<br>这些功能分拆为两部分，一部分提供给类内部使用，一部分是暴露给外部的api<br>从目录命名也可看出功能划分，internal目录存放内部方法，api目录存放对外暴露的方法  </p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/Vue源码解读-类的初始化入口/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1592,7 +1596,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

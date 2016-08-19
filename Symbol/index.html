@@ -375,11 +375,11 @@
 <ul>
 <li>不能使用new关键字</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Symbol</span>(); <span class="comment">// 报错：Uncaught TypeError: Symbol is not a constructor</span></div></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Symbol</span>(); <span class="comment">// 报错：Uncaught TypeError: Symbol is not a constructor</span></div></pre></td></tr></table></figure>
 <ul>
 <li>可以接受一个字符串作为参数，表示对Symbol实例的描述</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Symbol</span>(<span class="string">'a'</span>); <span class="comment">// Symbol(a)</span></div><div class="line">a.toString() <span class="comment">// "Symbol(a)"</span></div></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Symbol</span>(<span class="string">'a'</span>); <span class="comment">// Symbol(a)</span></div><div class="line">a.toString() <span class="comment">// "Symbol(a)"</span></div></pre></td></tr></table></figure>
 <ul>
 <li>Symbol值不能与其他类型的值进行运算</li>
 </ul>
@@ -387,7 +387,7 @@
 <ul>
 <li>Symbol值可以显式转为字符串</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Symbol</span>(<span class="string">'a'</span>);</div><div class="line"><span class="built_in">String</span>(a); <span class="comment">// "Symbol(a)"</span></div><div class="line">a.toString(); <span class="comment">// "Symbol(a)"</span></div></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Symbol</span>(<span class="string">'a'</span>);</div><div class="line"><span class="built_in">String</span>(a); <span class="comment">// "Symbol(a)"</span></div><div class="line">a.toString(); <span class="comment">// "Symbol(a)"</span></div></pre></td></tr></table></figure>
 <ul>
 <li>Symbol值也可以转为布尔值。</li>
 </ul>
@@ -399,11 +399,11 @@
 <h3 id="作为对象属性名"><a href="#作为对象属性名" class="headerlink" title="作为对象属性名"></a>作为对象属性名</h3><ul>
 <li>作为属性名的几种写法</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Symbol</span>();</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line">obj[a] = <span class="string">'hello'</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    [a]: <span class="string">'hello'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"><span class="built_in">Object</span>.defineProperty(obj, a, &#123;</div><div class="line">    value: <span class="string">'hello'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Symbol</span>();</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line">obj[a] = <span class="string">'hello'</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    [a]: <span class="string">'hello'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"><span class="built_in">Object</span>.defineProperty(obj, a, &#123;</div><div class="line">    value: <span class="string">'hello'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <ul>
 <li>Symbol值作为对象属性名时，不能用点运算符，因为点运算符后面总是字符串</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Symbol</span>();</div><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"></div><div class="line">obj.a = <span class="string">'hello'</span>;</div><div class="line">obj[a] <span class="comment">// undefined</span></div><div class="line">obj[<span class="string">'a'</span>] <span class="comment">// "hello"</span></div></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Symbol</span>();</div><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"></div><div class="line">obj.a = <span class="string">'hello'</span>;</div><div class="line">obj[a] <span class="comment">// undefined</span></div><div class="line">obj[<span class="string">'a'</span>] <span class="comment">// "hello"</span></div></pre></td></tr></table></figure>
 <ul>
 <li>不能被for…in、for…of遍历，也不会被Object.keys()、Object.getOwnPropertyNames()等方法返回，可以通过Object.getOwnPropertySymbols()获取，或者通过Reflect.ownKey(属于ES7的范畴，它代理了大部分的Object功能，对它不再继续深入，有兴趣的同学可以自行查阅资料)</li>
 </ul>
@@ -590,7 +590,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

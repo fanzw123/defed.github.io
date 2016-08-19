@@ -376,7 +376,7 @@
 <h3 id="delete-value"><a href="#delete-value" class="headerlink" title="delete(value)"></a>delete(value)</h3><ul>
 <li>删除某个值，返回一个布尔值，表示删除是否成功。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'a'</span>]);</div><div class="line"><span class="built_in">console</span>.log(a.delete(<span class="string">'a'</span>)); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// Set &#123;'b', 'c'&#125;</span></div></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = <span class="keyword">new</span> Set([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'a'</span>]);</div><div class="line"><span class="built_in">console</span>.log(a.<span class="keyword">delete</span>(<span class="string">'a'</span>)); <span class="regexp">//</span> <span class="literal">true</span></div><div class="line"><span class="built_in">console</span>.log(a); <span class="regexp">//</span> Set &#123;<span class="string">'b'</span>, <span class="string">'c'</span>&#125;</div></pre></td></tr></table></figure>
 <h3 id="has-value"><a href="#has-value" class="headerlink" title="has(value)"></a>has(value)</h3><ul>
 <li>返回一个布尔值，表示该值是否为Set的成员。</li>
 </ul>
@@ -522,7 +522,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

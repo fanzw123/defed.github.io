@@ -278,8 +278,8 @@
             
               
                 
-                <a class="post-title-link" href="/Vue源码解读-源码入口/" itemprop="url">
-                  Vue源码解读-源码入口
+                <a class="post-title-link" href="/Vue源码解读-类的初始化入口/" itemprop="url">
+                  Vue源码解读-类的初始化入口
                 </a>
               
             
@@ -292,7 +292,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-05T17:59:51+08:00" content="2016-07-05">
+            <time itemprop="dateCreated" datetime="2016-07-05T18:03:31+08:00" content="2016-07-05">
               2016-07-05
             </time>
           </span>
@@ -322,8 +322,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/Vue源码解读-源码入口/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Vue源码解读-源码入口/" itemprop="commentsCount"></span>
+                <a href="/Vue源码解读-类的初始化入口/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Vue源码解读-类的初始化入口/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -348,11 +348,11 @@
       
         
           <blockquote>
-<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br>从入口开始解读Vue源码，让你循序渐进的了解Vue的设计思路及执行过程。<br>Vue源码使用部分ES6语法和功能<br><code>/src/index.js</code></p>
+<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br><code>/src/instance/vue.js</code></p>
 </blockquote>
-<h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3><p>导入Vue类的初始化入口，并在Vue类上扩展静态方法  </p>
+<h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3><p>类的初始化过程中，主要绑定在类实例化过程中所需要用到的功能<br>这些功能分拆为两部分，一部分提供给类内部使用，一部分是暴露给外部的api<br>从目录命名也可看出功能划分，internal目录存放内部方法，api目录存放对外暴露的方法  </p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/Vue源码解读-源码入口/#more" rel="contents">
+            <a class="btn" href="/Vue源码解读-类的初始化入口/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -528,6 +528,131 @@
             
               
                 
+                <a class="post-title-link" href="/Vue源码解读-源码入口/" itemprop="url">
+                  Vue源码解读-源码入口
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-05T17:59:51+08:00" content="2016-07-05">
+              2016-07-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Vue源码解读-源码入口/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Vue源码解读-源码入口/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>version: 1.0.24<br>对源码的解析部分，纯属个人理解(不是纯属虚构)，理解有误或者没有理解透彻的地方，欢迎多拍砖头<br>从入口开始解读Vue源码，让你循序渐进的了解Vue的设计思路及执行过程。<br>Vue源码使用部分ES6语法和功能<br><code>/src/index.js</code></p>
+</blockquote>
+<h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3><p>导入Vue类的初始化入口，并在Vue类上扩展静态方法  </p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Vue源码解读-源码入口/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/Vue源码解读-Watchers-数据订阅者-异步执行队列/" itemprop="url">
                   Vue源码解读-Watchers(数据订阅者)异步执行队列
                 </a>
@@ -603,7 +728,7 @@
 <h4 id="订阅者接收到发布者的消息"><a href="#订阅者接收到发布者的消息" class="headerlink" title="订阅者接收到发布者的消息"></a>订阅者接收到发布者的消息</h4><ul>
 <li>Watcher在被触发(update方法被调用)时，被推入异步执行队列。</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Watcher.js</span></div><div class="line">Watcher.prototype.update = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.sync || !config.async)&#123; <span class="comment">// 同步的情况</span></div><div class="line">        <span class="keyword">this</span>.run()        </div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="comment">// 推入异步执行队列，该方法由队列管理员batcher.js对外暴露</span></div><div class="line">        pushWatcher(<span class="keyword">this</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Watcher.js</span></div><div class="line">Watcher.prototype.update = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.sync || !config.async)&#123; <span class="comment">// 同步的情况</span></div><div class="line">        <span class="keyword">this</span>.run()        </div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="comment">// 推入异步执行队列，该方法由队列管理员batcher.js对外暴露</span></div><div class="line">        pushWatcher(<span class="keyword">this</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/Vue源码解读-Watchers-数据订阅者-异步执行队列/#more" rel="contents">
               阅读全文 &raquo;
@@ -984,7 +1109,7 @@
 <p>可以重点关注模板字符串</p>
 </blockquote>
 <h3 id="支持超过-u0000——-uFFFF的Unicode表示法"><a href="#支持超过-u0000——-uFFFF的Unicode表示法" class="headerlink" title="支持超过\u0000——\uFFFF的Unicode表示法"></a>支持超过\u0000——\uFFFF的Unicode表示法</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert(<span class="string">'\u&#123;20BB7&#125;'</span>); <span class="regexp">//</span> ES6 <span class="string">"𠮷"</span></div><div class="line">alert(<span class="string">'\u20BB7'</span>); <span class="regexp">//</span> <span class="string">" 7"</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'\z'</span> === <span class="string">'z'</span>  <span class="comment">// true</span></div><div class="line"><span class="string">'\172'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div><div class="line"><span class="string">'\x7A'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div><div class="line"><span class="string">'\u007A'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div><div class="line"><span class="string">'\u&#123;7A&#125;'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">'\z'</span> === <span class="string">'z'</span>  <span class="comment">// true</span></div><div class="line"><span class="string">'\172'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div><div class="line"><span class="string">'\x7A'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div><div class="line"><span class="string">'\u007A'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div><div class="line"><span class="string">'\u&#123;7A&#125;'</span> === <span class="string">'z'</span> <span class="comment">// true</span></div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/String/#more" rel="contents">
               阅读全文 &raquo;
@@ -1359,138 +1484,10 @@
 
       
         
-          <h3 id="属性的简单表示法"><a href="#属性的简单表示法" class="headerlink" title="属性的简单表示法"></a>属性的简单表示法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="string">'foo'</span>;</div><div class="line"><span class="keyword">var</span> bar = &#123;foo&#125;; <span class="comment">// bar = &#123;foo: 'foo'&#125;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x, y</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;x, y&#125;;</div><div class="line">&#125;</div><div class="line">f(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// &#123;x: 1, y: 2&#125;</span></div></pre></td></tr></table></figure>
+          <h3 id="属性的简单表示法"><a href="#属性的简单表示法" class="headerlink" title="属性的简单表示法"></a>属性的简单表示法</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="string">'foo'</span>;</div><div class="line"><span class="keyword">var</span> bar = &#123;foo&#125;; <span class="comment">// bar = &#123;foo: 'foo'&#125;</span></div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span><span class="params">(x, y)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;x, y&#125;;</div><div class="line">&#125;</div><div class="line">f(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// &#123;x: 1, y: 2&#125;</span></div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/Object/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/Map/" itemprop="url">
-                  Map
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-28T17:15:46+08:00" content="2016-06-28">
-              2016-06-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/Map/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Map/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>键值对的集合</p>
-</blockquote>
-<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li>“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。</li>
-</ul>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</div><div class="line"><span class="keyword">var</span> o = &#123;p: <span class="string">"Hello World"</span>&#125;;</div><div class="line"></div><div class="line">m.<span class="keyword">set</span>(o, <span class="string">"content"</span>)</div><div class="line">m.<span class="keyword">get</span>(o) <span class="comment">// "content"</span></div><div class="line"></div><div class="line">m.has(o) <span class="comment">// true</span></div><div class="line">m.delete(o) <span class="comment">// true</span></div><div class="line">m.has(o) <span class="comment">// false</span></div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/Map/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1565,7 +1562,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
